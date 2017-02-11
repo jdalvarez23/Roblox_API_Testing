@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <p class="center white-text">Welcome!</p>
+  <div>
+    <center>
+      <form>
+        <input id="username" type="text" placeholder="Username"><br>
+        <input id="email" type="text" placeholder="Email"><br>
+        <input id="dob" type="text" placeholder="Date of Birth"><br>
+        <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURL();"/>
+        <br></br>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </center>
+  </div>
+
+  <div>
+    <center>
+      <p class="center white-text">Search Users Below:</p>
+      <form>
+        <input id="userID" type="text" placeholder="Username">
+        <button id="searchUser" type="submit">Search</button>
+      </form>
+    </center>
+  </div>
+
+  <div id="info">
+    <p id="searchedUser" class="center white-text">Username: </p>
+    <p id="searchedEmail" class="center white-text">Email: </p>
+    <p id="searchedDob" class="center white-text">Date of Birth: </p>
+    <p id="searchedPic" class="center white-text">Data Image: </p>
+    <img id="searchedImg" src="">
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCXkMA1tqlQQs14ObcuBl2WXstxjTkS6pc",
+    authDomain: "apptesting1-ab72f.firebaseapp.com",
+    databaseURL: "https://apptesting1-ab72f.firebaseio.com",
+    storageBucket: "apptesting1-ab72f.appspot.com",
+    messagingSenderId: "257739717019"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
