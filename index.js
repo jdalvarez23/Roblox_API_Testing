@@ -57,10 +57,17 @@ $("#searchUser").on("click", function() {
     var dob = snapshot.child("dob").val();
     var admin = snapshot.child("admin").val();
     var pic = snapshot.child("pic").val();
+    if (admin = "False") {
+      checker = "Nope, sorry.";
+    } else if (admin = "True") {
+      checker = "Yes, you are!";
+    }
+
 
     $("#searchedUser").html("Username: " + username);
     $("#searchedEmail").html("Email: " + email);
     $("#searchedDob").html("Date of Birth: " + dob);
+    $("#adminChecker").html("Admin: " + checker);
     $("#searchedPic").html("Data Image: " + pic);
     $("#searchedImg").attr("src", pic);
     $("#info").css("display", "block");
