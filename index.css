@@ -13,3 +13,9 @@ body {
 #info {
   display: none;
 }
+
+#searchedImg {
+  display: block;
+  margin: auto;
+  width:50%;
+}
