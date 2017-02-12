@@ -2,6 +2,7 @@ var usernamesetter = $("#username");
 var emailsetter = $("#email");
 var dobsetter = $("#dob");
 var picture;
+var adminChecker;
 var userID = $("#userID");
 
 
@@ -58,16 +59,16 @@ $("#searchUser").on("click", function() {
     var admin = snapshot.child("admin").val();
     var pic = snapshot.child("pic").val();
     if (admin == "False") {
-      checker = "Nope, sorry.";
+      adminChecker = "Nope, sorry.";
     } else if (admin == "True") {
-      checker = "Yes, you are!";
+      adminChecker = "Yes, you are!";
     }
 
 
     $("#searchedUser").html("Username: " + username);
     $("#searchedEmail").html("Email: " + email);
     $("#searchedDob").html("Date of Birth: " + dob);
-    $("#adminChecker").html("Admin: " + checker);
+    $("#adminChecker").html("Admin: " + adminChecker);
     $("#searchedPic").html("Data Image: " + pic);
     $("#searchedImg").attr("src", pic);
     $("#info").css("display", "block");
