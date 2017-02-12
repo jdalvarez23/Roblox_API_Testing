@@ -69,7 +69,7 @@ $("#searchUser").on("click", function() {
     $("#searchedUser").html("Username: " + username);
     $("#searchedEmail").html("Email: " + email);
     $("#searchedDob").html("Date of Birth: " + dob);
-    $("#adminChecker").html("Admin: " + adminChecker);
+    $("#admin").html("Admin: " + adminChecker);
     $("#searchedPic").html("Data Image: " + pic);
     $("#searchedImg").attr("src", pic);
     $("#info").css("display", "block");
