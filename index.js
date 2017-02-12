@@ -57,9 +57,9 @@ $("#searchUser").on("click", function() {
     var dob = snapshot.child("dob").val();
     var admin = snapshot.child("admin").val();
     var pic = snapshot.child("pic").val();
-    if (admin = "False") {
+    if (admin == "False") {
       checker = "Nope, sorry.";
-    } else if (admin = "True") {
+    } else if (admin == "True") {
       checker = "Yes, you are!";
     }
 
