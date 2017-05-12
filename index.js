@@ -5,8 +5,7 @@ $('#roblox_Submit').on("click", function() {
   var username = $('#roblox_Username').val();
   var rank = $('#roblox_Rank').val();
   var groupID = $('#roblox_Group').val();
-  //var postURL = "https://" + baseURL + "/setRank/" + groupID + "/" + username + "/" + rank;
-  var postURL = "https://" + baseURL + "/hello";
+  var postURL = "https://" + baseURL + "/setRank/" + groupID + "/" + username + "/" + rank;
   console.log(postURL);
   $.post({
     url: postURL,
