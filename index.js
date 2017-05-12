@@ -1,5 +1,5 @@
 // Roblox Variables
-var baseURL = "roblox-api-server.herokuapp.com/server.js";
+var baseURL = "roblox-api-server.herokuapp.com";
 
 $('#roblox_Submit').on("click", function() {
   var username = $('#roblox_Username').val();
