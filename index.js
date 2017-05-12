@@ -7,13 +7,16 @@ $('#roblox_Submit').on("click", function() {
   var groupID = $('#roblox_Group').val();
   var postURL = "https://" + baseURL + "/setRank/" + groupID + "/" + username + "/" + rank;
   console.log(postURL);
-  $.post({
+  var data = {};
+  data.key = "71GF5RsRo2W2f4eZ4eMJ1b79rsS77c6r";
+  $.ajax({
     url: postURL,
-    data: {key: "IVE1Q}o682Rwp1j50CwmYpPaVuI6*01IqFN0T0T'21E4DDrGWVC,)%r;=342Wr7"},
+    method: 'POST',
+    data: data,
+    dataType: "json",
     success: function () {
       console.log("Success");
-    },
-    dataType: "json"
+    }
   });
   // $.ajax({
   //   url: postURL,
