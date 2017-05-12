@@ -7,9 +7,13 @@ $('#roblox_Submit').on("click", function() {
   var groupID = $('#roblox_Group').val();
   var postURL = baseURL + "/setRank/" + groupID + "/" + username + "/" + rank;
   console.log(postURL);
-  $.post(postURL, function () {
-   console.log('success.'); // browser console
- });
+  $.post({
+    url: postURL,
+    success: function () {
+      console.log("Success");
+    },
+    dataType: "json"
+  });
   // $.ajax({
   //   url: postURL,
   //   dataType: dataType,
