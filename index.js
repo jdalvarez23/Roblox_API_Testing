@@ -12,7 +12,7 @@ $('#roblox_Submit').on("click", function() {
     success: function () {
       console.log("Success");
     },
-    dataType: "jsonp"
+    dataType: "json"
   });
   // $.ajax({
   //   url: postURL,
