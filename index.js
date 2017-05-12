@@ -1,11 +1,11 @@
 // Roblox Variables
-var baseURL = "floating-badlands-90885.herokuapp.com​";
+var baseURL = "roblox-api-server.herokuapp.com";
 
 $('#roblox_Submit').on("click", function() {
   var username = $('#roblox_Username').val();
   var rank = $('#roblox_Rank').val();
   var groupID = $('#roblox_Group').val();
-  var postURL = "https://floating-badlands-90885.herokuapp.com" + "/setRank/" + groupID + "/" + username + "/" + rank;
+  var postURL = baseURL + "/setRank/" + groupID + "/" + username + "/" + rank;
   console.log(postURL);
   $.ajax({
     url: postURL,
