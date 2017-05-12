@@ -9,6 +9,7 @@ $('#roblox_Submit').on("click", function() {
   console.log(postURL);
   $.post({
     url: postURL,
+    data: {'key': 'test'},
     success: function () {
       console.log("Success");
     },
